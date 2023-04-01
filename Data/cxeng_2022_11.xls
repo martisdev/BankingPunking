@@ -1,0 +1,747 @@
+
+
+
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html;charset=windows-1252">
+<META NAME=ProgId content=Excel.Sheet>
+<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.0  (Win32)">
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\,";
+	mso-displayed-thousand-separator:"\.";}
+@page
+	{margin:.98in .79in .98in .79in;
+	mso-header-margin:0in;
+	mso-footer-margin:0in;}
+tr
+	{mso-height-source:auto;}
+col
+	{mso-width-source:auto;}
+br
+	{mso-data-placement:same-cell;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:Normal;
+	mso-style-id:0;}
+td
+	{mso-style-parent:style0;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial;
+	mso-generic-font-family:auto;
+	mso-font-charset:0;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl24
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;}
+.xl25
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;}
+.xl25red
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	color:red;}
+.xl26
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:none;
+	border-bottom:none;
+	border-left:1.0pt solid windowtext;}
+.xl27
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:none;
+	border-left:none;}
+.xl27red
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	color:red;}
+.xl28
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;}
+.xl29
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;}
+.xl29red
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;
+	color:red;}
+.xl30
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;}
+.xl30red
+	{mso-style-parent:style0;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	color:red;
+	border-left:none;}
+.xl31
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;}
+.xl32
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;}
+.xl33
+	{mso-style-parent:style0;
+	font-weight:700;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:none;}
+.red{
+	color:red;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <x:ExcelWorkbook>
+  <x:ExcelWorksheets>
+   <x:ExcelWorksheet>
+    <x:Name>Hoja1</x:Name>
+    <x:WorksheetOptions>
+     <x:DefaultColWidth>10</x:DefaultColWidth>
+     <x:Print>
+      <x:ValidPrinterInfo/>
+      <x:PaperSizeIndex>9</x:PaperSizeIndex>
+      <x:HorizontalResolution>600</x:HorizontalResolution>
+      <x:VerticalResolution>600</x:VerticalResolution>
+     </x:Print>
+     <x:Selected/>
+     <x:Panes>
+      <x:Pane>
+       <x:Number>3</x:Number>
+       <x:ActiveRow>16</x:ActiveRow>
+       <x:ActiveCol>6</x:ActiveCol>
+      </x:Pane>
+     </x:Panes>
+     <x:ProtectContents>False</x:ProtectContents>
+     <x:ProtectObjects>False</x:ProtectObjects>
+     <x:ProtectScenarios>False</x:ProtectScenarios>
+    </x:WorksheetOptions>
+   </x:ExcelWorksheet>
+   <x:ExcelWorksheet>
+    <x:Name>Hoja2</x:Name>
+    <x:WorksheetOptions>
+     <x:DefaultColWidth>10</x:DefaultColWidth>
+     <x:ProtectContents>False</x:ProtectContents>
+     <x:ProtectObjects>False</x:ProtectObjects>
+     <x:ProtectScenarios>False</x:ProtectScenarios>
+    </x:WorksheetOptions>
+   </x:ExcelWorksheet>
+   <x:ExcelWorksheet>
+    <x:Name>Hoja3</x:Name>
+    <x:WorksheetOptions>
+     <x:DefaultColWidth>10</x:DefaultColWidth>
+     <x:ProtectContents>False</x:ProtectContents>
+     <x:ProtectObjects>False</x:ProtectObjects>
+     <x:ProtectScenarios>False</x:ProtectScenarios>
+    </x:WorksheetOptions>
+   </x:ExcelWorksheet>
+  </x:ExcelWorksheets>
+  <x:WindowHeight>11250</x:WindowHeight>
+  <x:WindowWidth>17595</x:WindowWidth>
+  <x:WindowTopX>120</x:WindowTopX>
+  <x:WindowTopY>30</x:WindowTopY>
+  <x:ProtectStructure>False</x:ProtectStructure>
+  <x:ProtectWindows>False</x:ProtectWindows>
+ </x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+
+<body link=blue vlink=purple>
+
+<table x:str border=0 cellpadding=0 cellspacing=0 width=467 style='border-collapse:
+ collapse;table-layout:fixed;width:350pt'>
+ <col width=80 style='width:60pt'>
+ <col width=199 style='mso-width-source:userset;mso-width-alt:7277;width:149pt'>
+ <col width=241 style='mso-width-source:userset;mso-width-alt:8813;width:181pt'>
+ <col width=133 style='mso-width-source:userset;mso-width-alt:4864;width:100pt'>
+ <col width=126 style='mso-width-source:userset;mso-width-alt:4608;width:95pt'>
+ <col width=193 style='mso-width-source:userset;mso-width-alt:7058;width:145pt'>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 width=80 style='height:12.75pt;width:60pt'></td>
+  <td width=199 style='width:149pt'></td>
+  <td width=241 style='width:181pt'></td>
+  <td width=133 style='width:100pt'></td>
+  <td width=126 style='width:95pt'></td>
+  <td width=193 style='width:145pt'></td>
+ </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 style='height:12.75pt'></td>
+  <td class=xl24>Número de compte</td>
+  <td>ES66 3025 0900 8614 0010 2375  (COMPTE CORRENT)</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+ </tr>
+	 <tr height=17 style='height:12.75pt'>
+	  <td height=17 style='height:12.75pt'></td>
+	  <td class=xl24>Titulars</td>
+	  <td>MARTI SOLER CHIVA</td>
+	  <td colspan=2 style='mso-ignore:colspan'></td>
+	 </tr>
+	 <tr height=17 style='height:12.75pt'>
+	  <td height=17 style='height:12.75pt'></td>
+	  <td class=xl24></td>
+	  <td>MARTA PARDOS MAS</td>
+	  <td colspan=2 style='mso-ignore:colspan'></td>
+	 </tr>
+ <tr height=17 style='height:12.75pt'>
+  <td height=17 style='height:12.75pt'></td>
+  <td class=xl24>Saldo</td>
+	<td align=right x:num="2114.41">2.114,41</td>
+  <td colspan=2 style='mso-ignore:colspan'></td>
+ </tr>
+	 <tr height=17 style='height:12.75pt'>
+	  <td height=17 style='height:12.75pt'></td>
+	  <td class=xl24>Data des de</td>
+	  <td>01/11/2022</td>
+	  <td colspan=2 style='mso-ignore:colspan'></td>
+	 </tr>
+	 <tr height=17 style='height:12.75pt'>
+	  <td height=17 style='height:12.75pt'></td>
+	  <td class=xl24>Data fins a</td>
+	  <td>30/11/2022</td>
+	  <td colspan=2 style='mso-ignore:colspan'></td>
+	 </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 colspan=5 style='height:13.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 style='height:13.5pt'></td>
+	<td class=xl31>DATA D'OPERACIÓ</td>
+	<td class=xl32>CONCEPTE</td>
+	<td class=xl32>DATA VALOR</td>
+	<td class=xl32>IMPORT</td>
+	<td class=xl33>SALDO</td>
+ </tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>30/11/2022</td>
+			<td class=xl25>TARGETA *0365 PA I SUCRE</td>
+			<td class=xl25>30/11/2022</td>
+					<td class=xl25red align=right x:num="-1.75">-1,75</td>
+				<td class=xl27 align=right x:num="3059.65">3.059,65</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>30/11/2022</td>
+			<td class=xl25>TARGETA *0365 VIVARI</td>
+			<td class=xl25>30/11/2022</td>
+					<td class=xl25red align=right x:num="-1.45">-1,45</td>
+				<td class=xl27 align=right x:num="3061.40">3.061,40</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>29/11/2022</td>
+			<td class=xl25>BIZUM DE: MARTA PORTA SANCHEZ</td>
+			<td class=xl25>29/11/2022</td>
+					<td class=xl25 align=right x:num="14.00">14,00</td>
+				<td class=xl27 align=right x:num="3062.85">3.062,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>29/11/2022</td>
+			<td class=xl25>TARGETA *0365 HIPERMERCAT ESCLAT H78I</td>
+			<td class=xl25>29/11/2022</td>
+					<td class=xl25red align=right x:num="-9.25">-9,25</td>
+				<td class=xl27 align=right x:num="3048.85">3.048,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>29/11/2022</td>
+			<td class=xl25>TARGETA *0365 MERCADONA MERCAT GINEUET</td>
+			<td class=xl25>29/11/2022</td>
+					<td class=xl25red align=right x:num="-3.00">-3,00</td>
+				<td class=xl27 align=right x:num="3058.10">3.058,10</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>28/11/2022</td>
+			<td class=xl25>BIZUM DE: Maria Montserrat Amich Llacuna</td>
+			<td class=xl25>28/11/2022</td>
+					<td class=xl25 align=right x:num="47.50">47,50</td>
+				<td class=xl27 align=right x:num="3061.10">3.061,10</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>28/11/2022</td>
+			<td class=xl25>NOMINA CTE DE:SANTI RIGOL PARER</td>
+			<td class=xl25>28/11/2022</td>
+					<td class=xl25 align=right x:num="1530.00">1.530,00</td>
+				<td class=xl27 align=right x:num="3013.60">3.013,60</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>28/11/2022</td>
+			<td class=xl25>TARGETA *0365 ATRAPALO.COM</td>
+			<td class=xl25>27/11/2022</td>
+					<td class=xl25red align=right x:num="-33.00">-33,00</td>
+				<td class=xl27 align=right x:num="1483.60">1.483,60</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>28/11/2022</td>
+			<td class=xl25>TARGETA *0365 SUMO CATALAN SCP</td>
+			<td class=xl25>26/11/2022</td>
+					<td class=xl25red align=right x:num="-20.43">-20,43</td>
+				<td class=xl27 align=right x:num="1516.60">1.516,60</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>25/11/2022</td>
+			<td class=xl25>BIZUM DE: ARTUR JOSEP PARDOS MAS</td>
+			<td class=xl25>25/11/2022</td>
+					<td class=xl25 align=right x:num="10.00">10,00</td>
+				<td class=xl27 align=right x:num="1537.03">1.537,03</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>25/11/2022</td>
+			<td class=xl25>TARGETA *0365 SUPERMERCADOS SUPER MAS</td>
+			<td class=xl25>25/11/2022</td>
+					<td class=xl25red align=right x:num="-10.07">-10,07</td>
+				<td class=xl27 align=right x:num="1527.03">1.527,03</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>25/11/2022</td>
+			<td class=xl25>TARGETA *0365 FES BICI 3.0</td>
+			<td class=xl25>25/11/2022</td>
+					<td class=xl25red align=right x:num="-12.00">-12,00</td>
+				<td class=xl27 align=right x:num="1537.10">1.537,10</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>24/11/2022</td>
+			<td class=xl25>BIZUM DE: Ivette Gonzalez Vivas</td>
+			<td class=xl25>24/11/2022</td>
+					<td class=xl25 align=right x:num="5.00">5,00</td>
+				<td class=xl27 align=right x:num="1549.10">1.549,10</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>24/11/2022</td>
+			<td class=xl25>BIZUM DE: NURIA DURAN MARTI</td>
+			<td class=xl25>24/11/2022</td>
+					<td class=xl25 align=right x:num="7.00">7,00</td>
+				<td class=xl27 align=right x:num="1544.10">1.544,10</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>22/11/2022</td>
+			<td class=xl25>BIZUM DE: SILVIA SOLER MORENO</td>
+			<td class=xl25>22/11/2022</td>
+					<td class=xl25 align=right x:num="34.75">34,75</td>
+				<td class=xl27 align=right x:num="1537.10">1.537,10</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>22/11/2022</td>
+			<td class=xl25>BIZUM DE: ANNA MORENO ESTRADA</td>
+			<td class=xl25>22/11/2022</td>
+					<td class=xl25 align=right x:num="12.50">12,50</td>
+				<td class=xl27 align=right x:num="1502.35">1.502,35</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>ANUL.COM.DISPOS. EFECTIU *0365 B.B.V.A.</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25 align=right x:num="2.70">2,70</td>
+				<td class=xl27 align=right x:num="1489.85">1.489,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>ANUL.TARGETA *0365 B.B.V.A.</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25 align=right x:num="50.00">50,00</td>
+				<td class=xl27 align=right x:num="1487.15">1.487,15</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>COM. CAIXER *0365 B.B.V.A.</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25red align=right x:num="-2.70">-2,70</td>
+				<td class=xl27 align=right x:num="1437.15">1.437,15</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>CAIXER TARG. *0365 B.B.V.A.</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25red align=right x:num="-50.00">-50,00</td>
+				<td class=xl27 align=right x:num="1439.85">1.439,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>BIZUM DE: RAQUEL LARA RODRIGUEZ</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25 align=right x:num="14.00">14,00</td>
+				<td class=xl27 align=right x:num="1489.85">1.489,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>BIZUM DE: SARA BATALLA PREIXENS</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25 align=right x:num="21.00">21,00</td>
+				<td class=xl27 align=right x:num="1475.85">1.475,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>TARGETA *0365 CAL PASSANALS</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25red align=right x:num="-6.68">-6,68</td>
+				<td class=xl27 align=right x:num="1454.85">1.454,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>TARGETA *0365 CREU</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25red align=right x:num="-8.20">-8,20</td>
+				<td class=xl27 align=right x:num="1461.53">1.461,53</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>TARGETA *0365 O'PAN IGUALADA</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25red align=right x:num="-7.05">-7,05</td>
+				<td class=xl27 align=right x:num="1469.73">1.469,73</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>BIZUM DE: YOLANDA CRUZ ESCUCHA</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25 align=right x:num="7.00">7,00</td>
+				<td class=xl27 align=right x:num="1476.78">1.476,78</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>BIZUM DE: ANNA MORENO ESTRADA</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25 align=right x:num="14.00">14,00</td>
+				<td class=xl27 align=right x:num="1469.78">1.469,78</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>BIZUM DE: MARIA BELEN VILANOVA FILLAT</td>
+			<td class=xl25>21/11/2022</td>
+					<td class=xl25 align=right x:num="31.00">31,00</td>
+				<td class=xl27 align=right x:num="1455.78">1.455,78</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>BIZUM DE: LAURA GANDIA SANCHEZ</td>
+			<td class=xl25>20/11/2022</td>
+					<td class=xl25 align=right x:num="5.00">5,00</td>
+				<td class=xl27 align=right x:num="1424.78">1.424,78</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>BIZUM DE: LAURA GANDIA SANCHEZ</td>
+			<td class=xl25>20/11/2022</td>
+					<td class=xl25 align=right x:num="23.08">23,08</td>
+				<td class=xl27 align=right x:num="1419.78">1.419,78</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>21/11/2022</td>
+			<td class=xl25>TARGETA *0365 CAPRABO 7876</td>
+			<td class=xl25>19/11/2022</td>
+					<td class=xl25red align=right x:num="-24.11">-24,11</td>
+				<td class=xl27 align=right x:num="1396.70">1.396,70</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>18/11/2022</td>
+			<td class=xl25>TARGETA *0365 CREU</td>
+			<td class=xl25>18/11/2022</td>
+					<td class=xl25red align=right x:num="-9.35">-9,35</td>
+				<td class=xl27 align=right x:num="1420.81">1.420,81</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>18/11/2022</td>
+			<td class=xl25>TARGETA *0365 CRIC CRAC</td>
+			<td class=xl25>18/11/2022</td>
+					<td class=xl25red align=right x:num="-10.00">-10,00</td>
+				<td class=xl27 align=right x:num="1430.16">1.430,16</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>18/11/2022</td>
+			<td class=xl25>R/ Som Energia, SCCL</td>
+			<td class=xl25>18/11/2022</td>
+					<td class=xl25red align=right x:num="-56.58">-56,58</td>
+				<td class=xl27 align=right x:num="1440.16">1.440,16</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>16/11/2022</td>
+			<td class=xl25>BIZUM DE: MARIA TERESA SELLARES PASCUAL</td>
+			<td class=xl25>16/11/2022</td>
+					<td class=xl25 align=right x:num="56.00">56,00</td>
+				<td class=xl27 align=right x:num="1496.74">1.496,74</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>16/11/2022</td>
+			<td class=xl25>BIZUM DE: MONICA PARDOS MAS</td>
+			<td class=xl25>16/11/2022</td>
+					<td class=xl25 align=right x:num="8.45">8,45</td>
+				<td class=xl27 align=right x:num="1440.74">1.440,74</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>16/11/2022</td>
+			<td class=xl25>TARGETA *0365 MERCADONA MERCAT GINEUET</td>
+			<td class=xl25>16/11/2022</td>
+					<td class=xl25red align=right x:num="-4.62">-4,62</td>
+				<td class=xl27 align=right x:num="1432.29">1.432,29</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>15/11/2022</td>
+			<td class=xl25>TARGETA *0365 MERCADONA MERCAT GINEUET</td>
+			<td class=xl25>15/11/2022</td>
+					<td class=xl25red align=right x:num="-3.00">-3,00</td>
+				<td class=xl27 align=right x:num="1436.91">1.436,91</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>14/11/2022</td>
+			<td class=xl25>BIZUM DE: LAURA GANDIA SANCHEZ</td>
+			<td class=xl25>14/11/2022</td>
+					<td class=xl25 align=right x:num="18.97">18,97</td>
+				<td class=xl27 align=right x:num="1439.91">1.439,91</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>14/11/2022</td>
+			<td class=xl25>BIZUM DE: MONICA PARDOS MAS</td>
+			<td class=xl25>14/11/2022</td>
+					<td class=xl25 align=right x:num="18.29">18,29</td>
+				<td class=xl27 align=right x:num="1420.94">1.420,94</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>14/11/2022</td>
+			<td class=xl25>TARGETA *0365 EUROPA 5G EU SL</td>
+			<td class=xl25>12/11/2022</td>
+					<td class=xl25red align=right x:num="-289.00">-289,00</td>
+				<td class=xl27 align=right x:num="1402.65">1.402,65</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>14/11/2022</td>
+			<td class=xl25>TARGETA *0365 CASA AMETLLER SL</td>
+			<td class=xl25>12/11/2022</td>
+					<td class=xl25red align=right x:num="-28.20">-28,20</td>
+				<td class=xl27 align=right x:num="1691.65">1.691,65</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>11/11/2022</td>
+			<td class=xl25>R/ CLUB EXCTA. UECANOIA</td>
+			<td class=xl25>11/11/2022</td>
+					<td class=xl25red align=right x:num="-35.00">-35,00</td>
+				<td class=xl27 align=right x:num="1719.85">1.719,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>09/11/2022</td>
+			<td class=xl25>TARGETA *0365 MERCADONA MERCAT GINEUET</td>
+			<td class=xl25>09/11/2022</td>
+					<td class=xl25red align=right x:num="-5.00">-5,00</td>
+				<td class=xl27 align=right x:num="1754.85">1.754,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>09/11/2022</td>
+			<td class=xl25>BIZUM DE: LAURA GANDIA SANCHEZ</td>
+			<td class=xl25>09/11/2022</td>
+					<td class=xl25 align=right x:num="5.00">5,00</td>
+				<td class=xl27 align=right x:num="1759.85">1.759,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>08/11/2022</td>
+			<td class=xl25>TARGETA *0365 FULL EQUIP SPORTS SCP</td>
+			<td class=xl25>08/11/2022</td>
+					<td class=xl25red align=right x:num="-13.00">-13,00</td>
+				<td class=xl27 align=right x:num="1754.85">1.754,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>07/11/2022</td>
+			<td class=xl25>TARGETA *0365 CAL PASSANALS</td>
+			<td class=xl25>07/11/2022</td>
+					<td class=xl25red align=right x:num="-32.29">-32,29</td>
+				<td class=xl27 align=right x:num="1767.85">1.767,85</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>07/11/2022</td>
+			<td class=xl25>TARGETA *0365 CREU</td>
+			<td class=xl25>07/11/2022</td>
+					<td class=xl25red align=right x:num="-8.20">-8,20</td>
+				<td class=xl27 align=right x:num="1800.14">1.800,14</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>07/11/2022</td>
+			<td class=xl25>TARGETA *0365 O'PAN IGUALADA</td>
+			<td class=xl25>07/11/2022</td>
+					<td class=xl25red align=right x:num="-4.70">-4,70</td>
+				<td class=xl27 align=right x:num="1808.34">1.808,34</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>07/11/2022</td>
+			<td class=xl25>TARGETA *0365 CASA AMETLLER SL</td>
+			<td class=xl25>05/11/2022</td>
+					<td class=xl25red align=right x:num="-59.08">-59,08</td>
+				<td class=xl27 align=right x:num="1813.04">1.813,04</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>04/11/2022</td>
+			<td class=xl25>BIZUM DE: Ivette Gonzalez Vivas</td>
+			<td class=xl25>04/11/2022</td>
+					<td class=xl25 align=right x:num="12.60">12,60</td>
+				<td class=xl27 align=right x:num="1872.12">1.872,12</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>03/11/2022</td>
+			<td class=xl25>LIQUIDACIO TARGETA VISA *3374 10/22</td>
+			<td class=xl25>01/11/2022</td>
+					<td class=xl25red align=right x:num="-233.42">-233,42</td>
+				<td class=xl27 align=right x:num="1859.52">1.859,52</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl26>02/11/2022</td>
+			<td class=xl25>TRANSFERENCIA A: Sònia Camps Moar</td>
+			<td class=xl25>02/11/2022</td>
+					<td class=xl25red align=right x:num="-690.00">-690,00</td>
+				<td class=xl27 align=right x:num="2092.94">2.092,94</td>
+	</tr>
+	<tr height=17 style='height:12.75pt'>
+		<td height=17 style='height:12.75pt'></td>
+			<td class=xl28>02/11/2022</td>
+			<td class=xl29>R/ OALGT-ORPI</td>
+			<td class=xl29>02/11/2022</td>
+					<td class=xl29red align=right x:num="-194.08">-194,08</td>
+				<td class=xl30 align=right x:num="2782.94">2.782,94</td>
+			
+	</tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+	<td height=17 width=80 style='height:12.75pt;width:60pt'></td>
+  <td width=199 style='width:149pt'></td>
+  <td width=241 style='width:181pt'></td>
+  <td width=133 style='width:100pt'></td>
+  <td width=126 style='width:95pt'></td>
+  <td width=193 style='width:145pt'></td>  
+ </tr>
+ <![endif]>
+</table>
+</body>
+</html>
+
