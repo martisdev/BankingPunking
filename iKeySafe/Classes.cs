@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankPunk
 {
@@ -11,12 +8,23 @@ namespace BankPunk
     public struct DataProject
     {
         public Conf Configuration;        
-        public List<settlements> Elements;
+        public List<AssetElement> Elements;
     }
 
     #endregion
     public class Conf
     {
+        #region FIELS
+
+        public List<Sectors> ListSectors = new List<Sectors>();
+
+        public List<Atribuibles> ListAtribuibles = new List<Atribuibles>();
+
+        public List<Banks> ListBanks = new List<Banks>();
+
+        public List<Macros> ListMacros = new List<Macros>();
+
+        #endregion
 
         #region PROPERTIES
         public long MinimSaldo
@@ -26,17 +34,7 @@ namespace BankPunk
         }
 
         #endregion
-
-        public List<Sectors> ListSectors = new List<Sectors>();
-
-        public List<Atribuibles> ListAtribuibles = new List<Atribuibles>();
-
-        public List<Banks> ListBanks = new List<Banks>();
-        
-        public List<Macros> ListMacros = new List<Macros>();
-
     }
-
 
     public class Banks
     {
@@ -45,25 +43,36 @@ namespace BankPunk
 
         public string Name { get; set; }
 
+        public Boolean Enable { get; set; }
         #endregion
 
+
+        #region CONSTRUCTORS
         public Banks()
         {
 
         }
 
-        public Banks(int mID , string mName)
+        public Banks(int mID, string mName, Boolean mEnable)
         {
-            ID = mID;
-            Name = mName;
-        }    
+            ID      = mID;
+            Name    = mName;
+            Enable  = mEnable;
+        }
+
+        #endregion
     }
 
     public class Atribuibles
-    { 
+    {
+        #region PROPERTIES
         public int ID { get; set; }
 
         public string Name { get; set; }
+
+        #endregion
+
+        #region  CONSTRUCTORS
 
         public Atribuibles()
         {
@@ -71,14 +80,17 @@ namespace BankPunk
         }
 
         public Atribuibles(int mID, string mName)
-        { 
+        {
             ID = mID;
             Name = mName;
         }
+        
+        #endregion
     }
 
     public class Sectors
     {
+        #region PROPERTIES
         public int ID
         {
             get; set;
@@ -87,7 +99,10 @@ namespace BankPunk
         {
             get; set;
         }
+        #endregion
 
+        #region CONSTRUCTORS
+        
         public Sectors()
         {
 
@@ -97,10 +112,11 @@ namespace BankPunk
             ID = mID;
             Name = mName;
         }
-
+        
+        #endregion
     }
     
-    public class  settlements
+    public class AssetElement
     {
 
         #region FIELDS
@@ -167,7 +183,7 @@ namespace BankPunk
         #endregion
 
         #region CONSTRUCTOR
-        public settlements()
+        public AssetElement()
         {
             this.Hash = string.Empty;
         }
@@ -229,6 +245,4 @@ namespace BankPunk
         }
         #endregion
     }
-
-
 }

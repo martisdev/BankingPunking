@@ -33,12 +33,7 @@ namespace BankPunk
             {
                 CManager.FileSource = Files[0];
                 CManager.LoadDocument();
-            }
-                
-
-                        
-            
-            //CManager.Params.MinimSaldo = 900;            
+            }            
         }
 
         #endregion

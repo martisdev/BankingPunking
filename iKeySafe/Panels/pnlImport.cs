@@ -1,18 +1,12 @@
-﻿using MetroFramework.Forms;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
 using System.IO;
-using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Controls;
 using System.Linq;
-using NPOI.SS.Formula.Functions;
-using static NPOI.POIFS.Crypt.CryptoFunctions;
+using System.Collections.Generic;
 
 namespace BankPunk.Panel
 {
@@ -31,7 +25,6 @@ namespace BankPunk.Panel
 
         }
         #endregion
-
         
         #region FIELS
 
@@ -73,7 +66,6 @@ namespace BankPunk.Panel
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 txtFiletoImport.Text = openFileDialog1.FileName;            
         }
-
 
         private async void metroTilePreImport_Click(object sender, EventArgs e)
         {
@@ -117,7 +109,7 @@ namespace BankPunk.Panel
             int repetits = 0;
             for (int r = 0; r < metroGridData.Rows.Count; r++)
             {
-                settlements NewElmt = new settlements();
+                AssetElement NewElmt = new AssetElement();
                 
                 NewElmt.Data_Moviment = DateTime.Parse(metroGridData.Rows[r].Cells["col_Data_Moviment"].Value.ToString());
                 NewElmt.Data_Valor_Moviment = DateTime.Parse(metroGridData.Rows[r].Cells["col_DataValor_Moviment"].Value.ToString());
@@ -127,7 +119,7 @@ namespace BankPunk.Panel
                 NewElmt.Font = int.Parse(metroComboBoxEntitats.SelectedValue.ToString());
 
                 NewElmt.Hash = CManager.GetElemntHash(NewElmt);
-                settlements ExistElmnt = CManager.dataPrj.Elements.FirstOrDefault(x => x.Hash == NewElmt.Hash);
+                AssetElement ExistElmnt = CManager.dataPrj.Elements.FirstOrDefault(x => x.Hash == NewElmt.Hash);
                 if (ExistElmnt == null)
                 {
                     foreach (Macros macro in CManager.dataPrj.Configuration.ListMacros)
@@ -160,7 +152,8 @@ namespace BankPunk.Panel
         private void pnlImport_Load(object sender, EventArgs e)
         {
             base.Title = "Importa els moviments bancaris";
-            metroComboBoxEntitats.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListBanks, null);
+            IEnumerable<Banks> aas =  CManager.dataPrj.Configuration.ListBanks.Where(x => x.Enable == true);
+            metroComboBoxEntitats.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListBanks.Where(x => x.Enable== true), null);
             metroComboBoxEntitats.DisplayMember = "Name";
             metroComboBoxEntitats.ValueMember = "ID";
             metroComboBoxEntitats.SelectedItem = CManager.dataPrj.Configuration.ListBanks.First();
@@ -168,8 +161,6 @@ namespace BankPunk.Panel
             SetColumns();
         }
     
-
-
         #endregion
 
         #region METHODS
@@ -344,7 +335,6 @@ namespace BankPunk.Panel
         }
 
         #endregion
-
 
     }
 }

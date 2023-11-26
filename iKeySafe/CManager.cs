@@ -109,10 +109,8 @@ namespace BankPunk
 
             dataPrj.Configuration.MinimSaldo = 900;
             dataPrj.Configuration.ListBanks = new List<Banks>(){
-                                                                { new Banks( 0, "BBVA")},
-                                                                { new Banks( 1, "Triodos")},
-                                                                { new Banks( 2, "Caixa Enginiers")},
-                                                                { new Banks( 3, "Metal·lic")}
+                                                                { new Banks( 0, "El meu banc",true)},                                                                
+                                                                { new Banks( 3, "Metal·lic", true)}
                                                             };
             dataPrj.Configuration.ListAtribuibles = new List<Atribuibles>() {
                                                                 { new Atribuibles( -1, "No Definit") },
@@ -139,10 +137,10 @@ namespace BankPunk
                                                                 { new Sectors(12, "Altres béns i serveis") },
                                                                 { new Sectors(13, "Impostos") }
                                                             };            
-            dataPrj.Elements = new List<settlements>();
+            dataPrj.Elements = new List<AssetElement>();
         }
 
-        public static string GetElemntHash(settlements ElemetTOCheck)
+        public static string GetElemntHash(AssetElement ElemetTOCheck)
         {
             string mHash = string.Empty;
             string inputString = string.Format("{0}{1}{2}{3}", ElemetTOCheck.Data_Moviment.ToString(), ElemetTOCheck.Concepte, ElemetTOCheck.Import.ToString(), ElemetTOCheck.Saldo.ToString());

@@ -88,7 +88,7 @@ namespace BankPunk.Panel
         public void swipe(bool show = true)
         {
             this.Visible = true;
-            Transition _transition = new Transition(new TransitionType_EaseInEaseOut(500));
+            Transition _transition = new Transition(new TransitionType_EaseInEaseOut(200));
             _transition.add(this, "Left", show ? 0 : this.Width);
             _transition.run();
 

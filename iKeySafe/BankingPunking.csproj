@@ -98,34 +98,34 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\pnlChart.cs">
+    <Compile Include="Panels\pnlChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\pnlChart.Designer.cs">
+    <Compile Include="Panels\pnlChart.Designer.cs">
       <DependentUpon>pnlChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\pnlConf.cs">
+    <Compile Include="Panels\pnlConf.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\pnlConf.Designer.cs">
+    <Compile Include="Panels\pnlConf.Designer.cs">
       <DependentUpon>pnlConf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\pnlEdit.cs">
+    <Compile Include="Panels\pnlEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\pnlEdit.Designer.cs">
+    <Compile Include="Panels\pnlEdit.Designer.cs">
       <DependentUpon>pnlEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\pnlSlider.cs">
+    <Compile Include="Panels\pnlSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\pnlSlider.Designer.cs">
+    <Compile Include="Panels\pnlSlider.Designer.cs">
       <DependentUpon>pnlSlider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel\pnlImport.cs">
+    <Compile Include="Panels\pnlImport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel\pnlImport.Designer.cs">
+    <Compile Include="Panels\pnlImport.Designer.cs">
       <DependentUpon>pnlImport.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -137,19 +137,19 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\pnlChart.resx">
+    <EmbeddedResource Include="Panels\pnlChart.resx">
       <DependentUpon>pnlChart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\pnlConf.resx">
+    <EmbeddedResource Include="Panels\pnlConf.resx">
       <DependentUpon>pnlConf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\pnlEdit.resx">
+    <EmbeddedResource Include="Panels\pnlEdit.resx">
       <DependentUpon>pnlEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\pnlSlider.resx">
+    <EmbeddedResource Include="Panels\pnlSlider.resx">
       <DependentUpon>pnlSlider.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel\pnlImport.resx">
+    <EmbeddedResource Include="Panels\pnlImport.resx">
       <DependentUpon>pnlImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

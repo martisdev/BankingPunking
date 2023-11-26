@@ -12,7 +12,7 @@ namespace BankPunk
 {
     public partial class FrmNew : MetroFramework.Forms.MetroForm
     {
-        public settlements NewElmt;
+        public AssetElement NewElmt;
         
         public FrmNew()
         {
@@ -31,7 +31,7 @@ namespace BankPunk
         private void metroTileOK_Click(object sender, EventArgs e)
         {
 
-            NewElmt = new settlements();
+            NewElmt = new AssetElement();
 
             NewElmt.Data_Moviment = this.metroDateTime.Value; 
             NewElmt.Data_Valor_Moviment = NewElmt.Data_Moviment;
@@ -43,7 +43,7 @@ namespace BankPunk
             NewElmt.Font = CManager.FONT_METALLIC;
 
             NewElmt.Hash = CManager.GetElemntHash(NewElmt);
-            settlements ExistElmnt = CManager.dataPrj.Elements.FirstOrDefault(x => x.Hash == NewElmt.Hash);
+            AssetElement ExistElmnt = CManager.dataPrj.Elements.FirstOrDefault(x => x.Hash == NewElmt.Hash);
             if (ExistElmnt == null)
             {
                 this.DialogResult = DialogResult.OK;                

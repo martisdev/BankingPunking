@@ -5,6 +5,7 @@ using System.Linq;
 using System.Drawing;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
+using NPOI.SS.Formula.Functions;
 
 namespace BankPunk.Panel
 {
@@ -191,7 +192,7 @@ namespace BankPunk.Panel
 
         #region METHODS
 
-        private void SetColumns()
+        private void SetColumns()        
         {
             DataGridViewCheckBoxColumn ColCheck = new DataGridViewCheckBoxColumn();
             ColCheck.Name = "Col_Check";
@@ -283,10 +284,12 @@ namespace BankPunk.Panel
 
         }
 
+
+        private List<int> ListSectorsFiltres = new List<int>();
         private void SetDataBase()
         {
             //filtre si és necessari
-            settlements[] ListFilter = CManager.dataPrj.Elements.ToArray();
+            AssetElement[] ListFilter = CManager.dataPrj.Elements.ToArray();
 
             if (metroTextBoxFilterText.Text.Length > 0)
                 ListFilter = ListFilter.Where(x => x.Concepte.ToLower().Contains(metroTextBoxFilterText.Text.ToLower())).ToArray();
@@ -300,9 +303,17 @@ namespace BankPunk.Panel
                 if (AtribuibleValue > CManager.NO_DEFINIT)
                     ListFilter = ListFilter.Where(x => x.Atribuible == AtribuibleValue).ToArray();
                 
-                int SectorValue = int.Parse(metroComboBoxFilterSector.SelectedValue.ToString());
+                int SectorValue = int.Parse(metroComboBoxFilterSector.SelectedValue.ToString());                                
                 if (SectorValue > CManager.NO_DEFINIT)
+                {
+                    if(!CheckBoxAddFilter.Checked)
+                        ListSectorsFiltres.Clear();
+
+                    ListSectorsFiltres.Add(SectorValue);
+                    //todo:
                     ListFilter = ListFilter.Where(x => x.Sector == SectorValue).ToArray();
+                }
+                    
             }
             catch { }            
 
@@ -311,14 +322,30 @@ namespace BankPunk.Panel
             mnuSelectAll.Checked = false;
             metroLabelRows.Text = string.Format("Nº de registres: {0}", ListFilter.Count());
 
-            this.metroLabelNumDespeses.Text = ListFilter.Where(x => x.Import < 0).Sum( y => y.Import).ToString();
-            this.metroLabelNumIngresos.Text = ListFilter.Where(x => x.Import > 0).Sum(y => y.Import).ToString();
+            this.metroLabelNumDespeses.Text = ListFilter.Where(x => x.Import < 0).Sum( y => y.Import).ToString("0,##");
+            this.metroLabelNumIngresos.Text = ListFilter.Where(x => x.Import > 0).Sum(y => y.Import).ToString("0,##");
 
         }
 
 
         #endregion
 
+        private void metroGridEdit_SelectionChanged(object sender, EventArgs e)
+        {
+            double despeses = 0;
+            double ingresos = 0;
+            foreach(DataGridViewRow row in metroGridEdit.SelectedRows)
+            {
+                string Value = row.Cells["Import"].Value.ToString();
+
+                if (double.Parse(Value) > 0)
+                    ingresos += double.Parse(Value);
+                else
+                    despeses += double.Parse(Value);
+            }
+            this.metroLabelNumDespeses.Text = despeses.ToString("0,##");
+            this.metroLabelNumIngresos.Text = ingresos.ToString("0,##");
+        }
     }
 }
 

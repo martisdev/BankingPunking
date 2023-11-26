@@ -22,7 +22,7 @@ namespace BankPunk.Panel
 
         private void InicializeChart()
         {
-            List<settlements> ListFilter = CManager.dataPrj.Elements;
+            List<AssetElement> ListFilter = CManager.dataPrj.Elements;
 
             try
             {
@@ -47,11 +47,16 @@ namespace BankPunk.Panel
                                                                             && x.Data_Moviment.Year == Year)
                                        select Elnt.Import).Sum();
 
-                    double DespesesComunes = (from Elnt in CManager.dataPrj.Elements.Where(x => x.Import < 0
+                    double DespesesComunes = 0;
+                    if (AtribuibleValue > CManager.NO_DEFINIT)
+                    {
+                        DespesesComunes = (from Elnt in CManager.dataPrj.Elements.Where(x => x.Import < 0
                                                                             && x.Data_Moviment.Month == Month
                                                                             && x.Data_Moviment.Year == Year
                                                                             && x.Atribuible == CManager.ATRIBUIBLE_TOTHOM)
-                                              select Elnt.Import).Sum()/2;
+                                                  select Elnt.Import).Sum() / 2;
+                    }
+                        
 
                     double Estalvi = ingresos + (Despeses + DespesesComunes);
 
@@ -77,7 +82,10 @@ namespace BankPunk.Panel
                         mych.Series["Estalvi"].SetDefault(true);
                         mych.Series["Estalvi"].Enabled = true;
                         dp = mych.Series["Estalvi"].Points.Add(Estalvi);
-                        dp.ToolTip = string.Format("{0} {1}", Estalvi, "Estalvi");
+                        if (AtribuibleValue > CManager.NO_DEFINIT)
+                            dp.ToolTip = string.Format("{0} {1}", Estalvi, "Estalvi (ingresos - (despeses + despeses comunes))");
+                        else
+                            dp.ToolTip = string.Format("{0} {1}", Estalvi, "Estalvi");
 
                         mych.Titles.Add(strMonthName);
                         mych.Width = 200;
