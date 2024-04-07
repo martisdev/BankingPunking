@@ -19,12 +19,12 @@ namespace BankPunk
             InitializeComponent();
 
             metroComboBoxAtribuible.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListAtribuibles, null);
-            metroComboBoxAtribuible.DisplayMember = "Value";
-            metroComboBoxAtribuible.ValueMember = "Key";
+            metroComboBoxAtribuible.DisplayMember = "Name";
+            metroComboBoxAtribuible.ValueMember = "ID";
 
             metroComboBoxSector.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListSectors, null);
-            metroComboBoxSector.DisplayMember = "Value";
-            metroComboBoxSector.ValueMember = "Key";
+            metroComboBoxSector.DisplayMember = "Name";
+            metroComboBoxSector.ValueMember = "ID";
 
         }
 

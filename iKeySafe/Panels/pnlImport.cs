@@ -290,6 +290,7 @@ namespace BankPunk.Panel
                             Import_Moviment = row[9].ToString().Replace(".", ",");
                             Saldo_Moviment = row[11].ToString().Replace(".", ",");
                             break;
+                        case "(Comú) Caixa Enginiers":
                         case "Caixa Enginiers":
                             Data_Moviment = DateTime.Parse(row[5].ToString());
                             Data_Valor_Moviment = DateTime.Parse(row[7].ToString());

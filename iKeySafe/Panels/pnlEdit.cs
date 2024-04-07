@@ -30,22 +30,39 @@ namespace BankPunk.Panel
             metroComboBoxAtribuible.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListAtribuibles, null);
             metroComboBoxAtribuible.DisplayMember = "Name";
             metroComboBoxAtribuible.ValueMember = "ID";
-            
+            metroToolTipInfo.SetToolTip(metroComboBoxAtribuible, "Atribuible");
+
             metroComboBoxSector.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListSectors, null);
             metroComboBoxSector.DisplayMember = "Name";
             metroComboBoxSector.ValueMember = "ID";
+            metroToolTipInfo.SetToolTip(metroComboBoxSector, "Sectors");
 
-            
             metroComboBoxFilterAtribuible.DataSource = CManager.dataPrj.Configuration.ListAtribuibles.ToArray();
             metroComboBoxFilterAtribuible.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListAtribuibles, null);
             metroComboBoxFilterAtribuible.DisplayMember = "Name";
             metroComboBoxFilterAtribuible.ValueMember = "ID";
             metroComboBoxFilterAtribuible.SelectedItem = CManager.dataPrj.Configuration.ListAtribuibles.First();
+            metroToolTipInfo.SetToolTip(metroComboBoxFilterAtribuible, "Atribuible");
 
             metroComboBoxFilterSector.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListSectors, null);
             metroComboBoxFilterSector.DisplayMember = "Name";
             metroComboBoxFilterSector.ValueMember = "ID";
             metroComboBoxFilterSector.SelectedItem = CManager.dataPrj.Configuration.ListSectors.First();
+            metroToolTipInfo.SetToolTip(metroComboBoxFilterSector, "Sectors");
+
+            metroComboBoxFilterBank.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListBanks.ToArray(), null);
+            metroComboBoxFilterBank.DisplayMember = "Name";
+            metroComboBoxFilterBank.ValueMember = "ID";
+            metroComboBoxFilterBank.SelectedItem = CManager.dataPrj.Configuration.ListSectors.First();
+            metroToolTipInfo.SetToolTip(metroComboBoxFilterBank, "Bancs");
+            metroDateIn.MinDate= CManager.dataPrj.Elements.ToArray().OrderBy(x => x.Data_Moviment).First().Data_Moviment;
+            metroDateIn.MaxDate = DateTime.Now;
+            metroDateIn.Value = metroDateIn.MinDate;
+            metroDateOut.MinDate = metroDateIn.MinDate;
+            metroDateOut.MaxDate = metroDateIn.MaxDate;
+            metroDateOut.Value = metroDateOut.MaxDate;
+            metroToolTipInfo.SetToolTip(metroDateIn, "Data d'inici");
+            metroToolTipInfo.SetToolTip(metroDateOut, "Data final");
 
             //macros
             Dictionary<int, string> ListShortMacros = new Dictionary<int, string>();
@@ -72,7 +89,9 @@ namespace BankPunk.Panel
 
             this.metroComboBoxFilterAtribuible.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxFilter_SelectedIndexChanged);
             this.metroComboBoxFilterSector.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxFilter_SelectedIndexChanged);
-            
+            this.metroComboBoxFilterBank.SelectedIndexChanged += new System.EventHandler(this.metroComboBoxFilter_SelectedIndexChanged);
+            metroDateIn.ValueChanged += new System.EventHandler(this.metroComboBoxFilter_SelectedIndexChanged);
+            metroDateOut.ValueChanged += new System.EventHandler(this.metroComboBoxFilter_SelectedIndexChanged);
         }
 
         private void metroToggleAtribuible_CheckedChanged(object sender, EventArgs e)
@@ -206,7 +225,7 @@ namespace BankPunk.Panel
             NewCol.DataPropertyName = "Data_Moviment";
             NewCol.HeaderText = "Data Moviment";
             NewCol.Width = 100;
-            NewCol.ReadOnly = true;
+            NewCol.ReadOnly = false;
             this.metroGridEdit.Columns.Add(NewCol);
 
             NewCol = new DataGridViewTextBoxColumn();
@@ -270,7 +289,7 @@ namespace BankPunk.Panel
             NewColCombo.DisplayMember = "Name";
             NewColCombo.ValueMember = "ID";
             NewColCombo.DataSource = new BindingSource(CManager.dataPrj.Configuration.ListBanks, null);
-            NewColCombo.Width = 75;
+            NewColCombo.Width = 90;
             NewColCombo.ReadOnly = true;
             this.metroGridEdit.Columns.Add(NewColCombo);
 
@@ -285,11 +304,11 @@ namespace BankPunk.Panel
         }
 
 
-        private List<int> ListSectorsFiltres = new List<int>();
+        //private List<int> ListSectorsFiltres = new List<int>();
         private void SetDataBase()
         {
             //filtre si és necessari
-            AssetElement[] ListFilter = CManager.dataPrj.Elements.ToArray();
+            AssetElement[] ListFilter = CManager.dataPrj.Elements.ToArray().Where(x => x.Data_Moviment >= this.metroDateIn.Value && x.Data_Moviment <= this.metroDateOut.Value).ToArray();
 
             if (metroTextBoxFilterText.Text.Length > 0)
                 ListFilter = ListFilter.Where(x => x.Concepte.ToLower().Contains(metroTextBoxFilterText.Text.ToLower())).ToArray();
@@ -306,14 +325,21 @@ namespace BankPunk.Panel
                 int SectorValue = int.Parse(metroComboBoxFilterSector.SelectedValue.ToString());                                
                 if (SectorValue > CManager.NO_DEFINIT)
                 {
-                    if(!CheckBoxAddFilter.Checked)
-                        ListSectorsFiltres.Clear();
+                    //if(!CheckBoxAddFilter.Checked)
+                    //    ListSectorsFiltres.Clear();                        
 
-                    ListSectorsFiltres.Add(SectorValue);
+                    //ListSectorsFiltres.Add(SectorValue);
                     //todo:
                     ListFilter = ListFilter.Where(x => x.Sector == SectorValue).ToArray();
                 }
-                    
+
+                int BankValue = int.Parse(metroComboBoxFilterBank.SelectedValue.ToString());
+                if(BankValue > CManager.NO_DEFINIT)
+                {
+                    ListFilter = ListFilter.Where(x => x.Font == BankValue).ToArray();
+                }
+
+
             }
             catch { }            
 

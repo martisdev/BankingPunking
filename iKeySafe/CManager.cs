@@ -109,8 +109,8 @@ namespace BankPunk
 
             dataPrj.Configuration.MinimSaldo = 900;
             dataPrj.Configuration.ListBanks = new List<Banks>(){
-                                                                { new Banks( 0, "El meu banc",true)},                                                                
-                                                                { new Banks( 3, "Metal·lic", true)}
+                                                                { new Banks( -1, "No Definit",true)},                                                                
+                                                                { new Banks( 0, "Metal·lic", true)}
                                                             };
             dataPrj.Configuration.ListAtribuibles = new List<Atribuibles>() {
                                                                 { new Atribuibles( -1, "No Definit") },
@@ -135,7 +135,8 @@ namespace BankPunk
                                                                 { new Sectors(10, "Restaurants i hotels") },
                                                                 { new Sectors(11, "Begudes alcohòliques i tabac" )},
                                                                 { new Sectors(12, "Altres béns i serveis") },
-                                                                { new Sectors(13, "Impostos") }
+                                                                { new Sectors(13, "Impostos") },
+                                                                { new Sectors(13, "Energia") }
                                                             };            
             dataPrj.Elements = new List<AssetElement>();
         }
